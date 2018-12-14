@@ -15,6 +15,4 @@
 -- | 200                 |
 -- +---------------------+
 
-select salary as SecondHighestSalary from Employee 
-where salary < (select salary from Employee order by salary desc limit 1) 
-order by salary desc limit 1;
+select (select distinct salary from Employee order by salary desc limit 1 offset 1) as SecondHighestSalary;
