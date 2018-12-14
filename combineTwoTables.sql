@@ -24,5 +24,4 @@
 
 -- FirstName, LastName, City, State
 
-select p.FirstName, p.LastName, a.City, a.State from Person as p inner join Address as a 
-on p.PersonId = a.PersonId;
+select p.FirstName, p.LastName from Person as p left join Address as a on p.PersonId = a.PersonId;
