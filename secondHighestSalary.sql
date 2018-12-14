@@ -15,4 +15,4 @@
 -- | 200                 |
 -- +---------------------+
 
-select salary from Employee order by salary desc;
+select salary from Employee where salary < 300 order by salary desc limit 1;
